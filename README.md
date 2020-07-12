@@ -14,4 +14,4 @@ Run `npm test` to start unit test for components.
 
 ## Demo
 
-![Alt text](products-detail-app-demo.gif)
+![](products-detail-app-demo.gif)
