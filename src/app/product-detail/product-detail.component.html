@@ -1,0 +1,22 @@
+<div class="flex-container">
+
+    <div class="flex-child imageDiv">
+        <img src="../../{{product[0].img}}" />
+    </div>
+    
+    <div class="flex-child infoDiv">
+        <h4 class="card-title">{{product[0].name}}</h4>
+        <p><span>Price: </span> <span class="price">{{product[0].price}}</span></p>
+        <p [ngClass] = "product[0].availablity === 'A' ? 'green' : 'red'">{{product[0].availablity === "A" ? 'In Stock' : 'Out Of Stock'}}</p>
+        <p>
+            <button (click)="addToCart()" class="addToCart" [disabled]="product[0].availablity !== 'A'">Add To Cart</button>
+        </p>
+        <p>
+            {{product[0].description}}
+        </p>
+        <p class="green" *ngIf="isAdded">
+            Added To Cart Successfully, feature yet to come :)
+        </p>
+    </div>
+    
+  </div>
